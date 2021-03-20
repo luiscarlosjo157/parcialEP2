@@ -5,7 +5,7 @@ from src.models.database import DatabaseModel
 @app.route('/database', methods=['GET'])
 def listarDatabase():
     databaseModel = DatabaseModel()
-    database = DatabaseModel.listarDatabase()
+    database = databaseModel.listarDatabase()
     return jsonify({"database":database})
 
 @app.route("/createDatabase", methods=["POST"])
@@ -19,7 +19,7 @@ def createDatabase():
 @app.route('/listarTables', methods=['GET'])
 def listarTables():
     databaseModel = DatabaseModel()
-    lisatartables = DatabaseModel.listarTablas()
+    lisatartables = databaseModel.listarTablas()
     return jsonify({"lisatartables":lisatartables})
 
 
