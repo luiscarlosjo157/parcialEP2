@@ -20,6 +20,16 @@ class DatabaseModel():
         database = cursor.fetchall()
         cursor.close()
         return database
-
+    """select
+table_schema,
+table_name,
+column_name,
+data_type
+from
+information_schema.columns
+where
+table_schema = 'facturacion'
+order
+by table_name, table_name;*/"""
    
    
